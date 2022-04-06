@@ -40,7 +40,16 @@
           </div>
         </nav>
       </header>
-      @yield('content')
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            @if(sesion('msg'))
+              <p class="msg">{{ sesion('msg') }}</p>
+            @endif
+            @yield('content')
+          </div>
+        </div>
+      </main>
       <footer>
         <p>Ícaro Apolo &copy; 2022</p>
       </footer>
