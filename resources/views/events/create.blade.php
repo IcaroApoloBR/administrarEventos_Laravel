@@ -40,7 +40,7 @@
         <input type="checkbox" name="items[]" value="Palco"> Palco
       </div>
       <div class="form-group">
-        <input type="checkbox" name="items[]" value="Cerveja Grátis"> Cerveja Grátis
+        <input type="checkbox" name="items[]" value="Cerveja Gratis"> Cerveja Grátis
       </div>
       <div class="form-group">
         <input type="checkbox" name="items[]" value="Open Food"> Open Food
