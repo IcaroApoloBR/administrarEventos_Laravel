@@ -43,6 +43,7 @@
                   this.closest('form').submit();">
                     Sair
                   </a>
+                </form>
               </li>
               @endauth
               @guest
