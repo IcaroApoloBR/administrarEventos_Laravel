@@ -82,7 +82,11 @@ class EventController extends Controller
 
         $events = $user->events;
 
-        return view('events.dashboard', ['events' => $events]);
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        return view('events.dashboard',
+            ['events' => $events, 'eventsasparticipant' => $eventsAsParticipant]
+        );
     }
 
     public function destroy($id) {
@@ -94,7 +98,13 @@ class EventController extends Controller
 
     public function edit($id) {
 
+        $user = auth()->user();
+
         $event = Event::findOrFail($id);
+
+        if($user->id != $event->user_id) {
+            return redirect('/dashboard');
+        }
 
         return view('events.edit', ['event' => $event]);
     }
@@ -136,3 +146,13 @@ class EventController extends Controller
     }
 
 }
+
+// Top, eu fiz com um foreach na propria função join
+
+// foreach($event->users as $participant){
+//             if($participant->id == $user->id){
+//                 return redirect('/dashboard')->with('msg', 'Você já está cadastrado neste evento: ' . $event->title);
+//             }
+//         }
+//         $user->eventsAsParticipant()->attach($id);
+//         return redirect('/dashboard')->with('msg', 'Sua presença no está confirmada no evento: ' . $event->title);
