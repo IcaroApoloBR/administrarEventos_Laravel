@@ -23,13 +23,13 @@
   }
   
   .btn-primary {
-    background-color: #F2A340;
-    border: 2px solid #C28008;
+    background-color: #219ebc;
+    border: 2px solid #023047;
   }
   
   .btn-primary:hover {
-    background-color: #C28008;
-    border-color: #C28008;
+    background-color: #023047;
+    border-color: #023047;
   }
 
   .msg {
@@ -68,7 +68,7 @@
   }
   
   #navbar a:hover {
-    color: #F2A340;
+    color: #219ebc;
   }
   
   /* Search Container */
@@ -82,7 +82,7 @@
   }
   
   #search-container h1 {
-    color: #F2A340;
+    color: #219ebc;
     margin-bottom: 30px;
     font-weight: 900;
   }
@@ -185,7 +185,7 @@
 
   #info-container ion-icon {
     font-size: 20px;
-    color: #F2A340;
+    color: #219ebc;
     margin-right: 5px;
   }
 
@@ -231,7 +231,7 @@
     text-align: center;
     background-color: #353E48;
     color: #FFF;
-    padding: 30px;
+    padding: 20px;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -240,3 +240,14 @@
   footer p {
     margin-bottom: 0;
   }
+
+  .icons {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 24px;
+    color: #FFF;
+  }
+
+  .icons:hover {
+    color: #219ebc;
+  } 
